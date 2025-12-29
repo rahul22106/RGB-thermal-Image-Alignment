@@ -13,7 +13,7 @@ TARGET_SIZE = (640, 512)
 INVERT_THERMAL = True
 MIN_MATCHED_KEYPOINTS = 10
 
-# Setup - create folders if they don't exist
+# creating folders if they don't exist
 os.makedirs(INPUT_DIR, exist_ok=True)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -66,7 +66,7 @@ def align_thermal_to_rgb():
         thermal_resized = cv2.resize(thermal_color, TARGET_SIZE)
         rgb_resized = cv2.resize(rgb_color, TARGET_SIZE)
 
-        # 3. Create LoFTR inputs from resized images
+        # 3. Created LoFTR inputs from resized images
         thermal_tensor, thermal_gray = preprocess_for_loftr(thermal_resized, invert=INVERT_THERMAL)
         rgb_tensor, rgb_gray = preprocess_for_loftr(rgb_resized, invert=False)
 
@@ -88,7 +88,7 @@ def align_thermal_to_rgb():
         # 4. Apply homography to the resized thermal image
         aligned_thermal = cv2.warpPerspective(thermal_resized, H, TARGET_SIZE)
 
-        # 5. Save aligned thermal image
+        # 5. Saving the aligned thermal image
         out_path = os.path.join(OUTPUT_DIR, f"{base_name}_AT.JPG")
         cv2.imwrite(out_path, aligned_thermal)
         print(f"Saved aligned thermal image: {out_path} (size: {aligned_thermal.shape})")
