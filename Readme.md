@@ -140,15 +140,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 Rahul Kumar Mishra
 
-## Citation
-
-If you use this tool in your research, please cite the LoFTR paper:
-
-```bibtex
-@article{sun2021loftr,
-  title={{LoFTR}: Detector-Free Local Feature Matching with Transformers},
-  author={Sun, Jiaming and Shen, Zehong and Wang, Yuang and Bao, Hujun and Zhou, Xiaowei},
-  journal={CVPR},
-  year={2021}
-}
-```
