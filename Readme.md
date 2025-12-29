@@ -57,6 +57,10 @@ python Alignment.py
    - Original RGB images: `<basename>_Z.JPG`
    - Aligned thermal images: `<basename>_AT.JPG`
 
+### Web Interface(Streamlit)
+```bash
+streamlit run app.py
+```
 ### Configuration
 
 You can adjust the following parameters in `Alignment.py`:
